@@ -12,11 +12,7 @@ logger = logging.getLogger(__name__)
 
 class Database:
     def __init__(self):
-        """
-        Initialize MongoDB connection using environment variables
-        For production, use: mongodb+srv://username:password@cluster.mongodb.net/
-        For local development: mongodb://localhost:27017/
-        """
+        
         connection_string = os.getenv('MONGODB_URL')
         db_name = os.getenv('MONGODB_DB_NAME')
         
